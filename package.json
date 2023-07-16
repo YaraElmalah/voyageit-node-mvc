@@ -1,0 +1,29 @@
+{
+  "name": "voyageit-node-mvc",
+  "version": "1.0.0",
+  "description": "The VoyageIt Node.js project is a comprehensive and feature-rich travel management system designed to simplify and enhance the travel experience. With a wide range of functionalities, including sending email, downloading files, login system, booking system, and much more, VoyageIt empowers travelers to seamlessly navigate their journeys with convenience and efficiency.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "keywords": [
+    "voyage",
+    "travel",
+    "nodejs",
+    "express",
+    "login",
+    "email",
+    "download",
+    "pdf",
+    "booking"
+  ],
+  "author": "Yara Elmalah",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "pug": "^3.0.2"
+  }
+}
