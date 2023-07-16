@@ -38,9 +38,12 @@ The VoyageIt Node.js project is a comprehensive travel management system built t
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please submit an issue or create a pull request.
 
-## Support
 
-For any questions or assistance regarding the VoyageIt Node.js Project, please reach out to our support team at support@voyageit.com.
+## License
+
+This project is licensed under the MIT License.
+
+Enjoy the convenience and efficiency of the VoyageIt Node.js Project for managing your travel adventures. Simplify your travel planning, streamline your itinerary management, and make the most out of your journeys with confidence and ease.
 
 ## Contact
 
@@ -50,7 +53,7 @@ If you have any questions or suggestions regarding this repository, feel free to
   - Email: yaraelmalah2016@gmail.com | yaraelmalah@gmail.com
   - Linkdin: [Yara Elmalah](https://www.linkedin.com/in/yara-elmalah/)
 
-We appreciate your interest and contributions to this repository. Happy coding with Racket! :computer: :clinking_glasses:
+We appreciate your interest and contributions to this repository. Happy coding with Node.js :computer: :clinking_glasses:
 
 
 Best regards,
@@ -58,9 +61,3 @@ Best regards,
 Yara Elmalah 😊
 
 In the world of code, we unleash our Nen, channeling our aura into transformative creations :sauropod: :fire:	
-
-## License
-
-This project is licensed under the MIT License.
-
-Enjoy the convenience and efficiency of the VoyageIt Node.js Project for managing your travel adventures. Simplify your travel planning, streamline your itinerary management, and make the most out of your journeys with confidence and ease.
