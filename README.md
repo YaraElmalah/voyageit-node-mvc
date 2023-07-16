@@ -42,6 +42,23 @@ Contributions are welcome! If you have any suggestions, bug reports, or feature 
 
 For any questions or assistance regarding the VoyageIt Node.js Project, please reach out to our support team at support@voyageit.com.
 
+## Contact
+
+If you have any questions or suggestions regarding this repository, feel free to reach out to the project maintainer:
+
+- Yara Elmalah
+  - Email: yaraelmalah2016@gmail.com | yaraelmalah@gmail.com
+  - Linkdin: [Yara Elmalah](https://www.linkedin.com/in/yara-elmalah/)
+
+We appreciate your interest and contributions to this repository. Happy coding with Racket! :computer: :clinking_glasses:
+
+
+Best regards,
+
+Yara Elmalah 😊
+
+In the world of code, we unleash our Nen, channeling our aura into transformative creations :sauropod: :fire:	
+
 ## License
 
 This project is licensed under the MIT License.
