@@ -6,7 +6,6 @@ Check UI code repo from [here](https://github.com/YaraElmalah/voyageIt)
 
 ## Features
 
-- **Email Download:** Seamlessly download travel-related emails into the system for centralized access to important travel information.
 - **User Login System:** Secure user authentication system that allows travelers to create personalized accounts for managing their preferences, itineraries, bookings, and other relevant details.
 - **Booking System:** Real-time booking functionality for flights, accommodations, car rentals, and other travel services, offering a wide range of options to choose from.
 - **Travel Itinerary Management:** Intuitive interface for creating, organizing, and modifying travel itineraries, keeping all trip details organized in one place.
