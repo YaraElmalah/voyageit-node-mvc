@@ -1,0 +1,19 @@
+// Start Contact Us
+section.contact-us
+  .container
+    h2.contact-head.head-border.h1.text-capitalize.text-center.text-uppercase
+      | contact us now
+    p.contact-desc.text-center.text-capitalize
+      | don&apos;t hestiate, send us your query
+    // Start Our Grid System
+    .row
+      form
+        .col-md-6
+          input.form-control.input-lg(type='text' name='name' placeholder='Name')
+          input.form-control.input-lg(type='email' name='email' placeholder='Email')
+          input.form-control.input-lg(type='text' name='subject' placeholder='Subject')
+        .col-md-6
+          textarea.form-control(name='message' placeholder='Message')
+    // End Our Grid System
+    button.contact-btn.text-capitalize.btn-lg send message
+// End Contact Us
