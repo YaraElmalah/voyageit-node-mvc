@@ -1,0 +1,44 @@
+// Start Tabs Section
+section.tabs-sections
+  .container
+    .row
+      .col-sm-2
+        ul.list-unstyled.tab-switch.text-center
+          li.selected.text-capitalize(data-class='.tab-one')
+            | on the air
+          li.text-capitalize(data-class='.tab-two') hotels
+          li.text-capitalize(data-class='.tab-three') guide
+      .col-sm-6
+        .tabs-content
+          .tab-one
+            h3.text-capitalize.text-center
+              | comfortable air lines
+            p.lead
+              | Alaska Airlines, American lines, Egyptair lines and Lufthansa
+              | and more .. always first class and good service with a special
+              | care of babys and good view from the air.
+            button.btn.btn-lg.text-capitalize.btn-block
+              | know more
+          .tab-two
+            h3.text-capitalize.text-center fancy hotels
+            p.lead
+              | 5 Stars hotels with special care for our customers, you may
+              | recognise some of them in the movies. 
+              br
+              |                   You will enjoy the good air and the beauty of nature.
+            button.btn.btn-lg.text-capitalize.btn-block
+              | discover hotels
+          .tab-three
+            h3.text-capitalize.text-center with you .. always
+            p.lead
+              | We provide a guide with every customer to help and guide all
+              | over the world .. with just a click on your mobile and we are
+              | here.
+            button.btn.btn-lg.text-capitalize.btn-block
+              | try our service
+      .col-sm-4.hidden-xs.hidden-sm
+        .tabs-img
+          img.img-responsive.center-block.tab-one(src='images/plane.png' alt='')
+          img.img-responsive.center-block.tab-two(src='images/hotel.png' alt='')
+          img.img-responsive.center-block.tab-three(src='images/mobile.png' alt='')
+// End Tabs Section

@@ -1,0 +1,667 @@
+/*Start Global Rules*/
+
+:root {
+    --main-color: #e66767;
+    --p-color: #a9aaac
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 51px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.head-border::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 25px 0;
+}
+
+
+/*End Global Rules*/
+
+
+/*Start Navbar*/
+
+.navbar-inverse.scrolled {
+    background-color: rgba(3, 3, 3, .7);
+    border-color: rgba(3, 3, 3, .7);
+}
+
+
+/*End Navbar*/
+
+
+/*Start Header*/
+
+header {
+    background: url('../images/header.webp') no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+
+header .overlay,
+.stylish .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(3, 3, 3, .85);
+}
+
+header .centering-vh {
+    margin-top: 25vh;
+}
+
+@media(max-width: 991px) {
+    header .centering-vh {
+        margin-bottom: 25vh;
+    }
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 65px;
+    color: var(--main-color);
+}
+
+header h1 span {
+    font-weight: normal;
+    color: #FFF;
+}
+
+header .lead,
+.stylish .stylish-desc {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+header .lead::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #fff;
+    margin: 25px 0;
+}
+
+@media(max-width: 991px) {
+    header .lead::before {
+        text-align: center;
+        display: block;
+        margin: 20px auto
+    }
+}
+
+header button,
+.stylish button {
+    background: transparent;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    margin-top: 20px;
+    font-family: 'Raleway';
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+header form {
+    width: 360px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+@media(max-width: 991px) {
+    header form {
+        display: none !important
+    }
+}
+
+header form h2 {
+    background: #f5f5f5;
+    color: #333;
+    font-size: 18px;
+    padding: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+header form h2 span {
+    color: var(--main-color)
+}
+
+header form .form-control {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    margin: 0 auto;
+    padding: 35px;
+}
+
+header form input[type='submit'] {
+    background: var(--main-color);
+    padding: 15px;
+    border-radius: 0
+}
+
+
+/*End Header*/
+
+
+/*Start Social Media*/
+
+.social-media {
+    padding: 10px;
+    background: #fff;
+    -webkit-box-shadow: -21px -5px 13px #000;
+    -moz-box-shadow: -21px -5px 13px #000;
+    -o-box-shadow: -21px -5px 13px #000;
+    box-shadow: -21px -5px 13px #000;
+}
+
+.social-media h4 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 991px) {
+    .social-media h4 {
+        font-size: 25px;
+        margin-bottom: 5px
+    }
+}
+
+.social-media p {
+    line-height: 1.4;
+    color: #A1A1A1;
+}
+
+.social-media a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.social-media a i {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    margin: 20px 15px;
+}
+
+.social-media a .fa-facebook-f:hover {
+    color: #3b5998;
+}
+
+.social-media a .fa-twitter:hover {
+    color: #1da1f2;
+}
+
+.social-media a .fa-linkedin-in:hover {
+    color: #0077b5;
+}
+
+.social-media a .fa-pinterest-p:hover {
+    color: #bd081c;
+}
+
+.social-media a .fa-behance:hover {
+    color: #1769ff;
+}
+
+.social-media a .fa-hackerrank:hover {
+    color: #2ec866;
+}
+
+.social-media a .fa-instagram:hover {
+    color: #ffdc80;
+}
+
+
+/*End Social Media*/
+
+
+/*Start Tabs Section*/
+
+.tabs-sections {
+    padding: 80px 0;
+    background: #f5f5f5;
+    margin-top: 7px;
+}
+
+@media(max-width: 991px) {
+    .tabs-sections .tab-switch {
+        margin-bottom: 25px;
+    }
+}
+
+.tabs-sections .tab-switch li {
+    background-color: #333;
+    color: #fff;
+    height: 110px;
+    line-height: 110px;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+}
+
+.tabs-sections .tab-switch li.selected,
+.tabs-sections .tab-switch li:hover {
+    background: var(--main-color);
+    color: #fff
+}
+
+.tabs-sections .tabs-content h3 {
+    margin-top: 0;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.tabs-sections .tabs-content .lead {
+    line-height: 1.9;
+    font-size: 24px;
+    color: #2e2b2b;
+}
+
+.tabs-sections .tabs-content button {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.tabs-sections .tabs-content div:not(:first-child),
+.tabs-sections .tabs-img img:not(:first-child) {
+    display: none;
+}
+
+
+/*End Tabs Section*/
+
+
+/*Start Features*/
+
+.sublist {
+    padding: 70px 0;
+}
+
+.sublist .sub-img {
+    margin-top: 50px;
+    box-shadow: 9px 7px 10px 0px #e2dcdc;
+}
+
+.sublist .list-info {
+    padding-left: 20px
+}
+
+.sublist .list-info h3 {
+    font-weight: bold;
+}
+
+.sublist .list-info p {
+    color: var(--p-color);
+    line-height: 1.6;
+}
+
+.sublist .list-icon {
+    margin-top: 30px;
+}
+
+.sublist .list-info i,
+.awesome i {
+    width: 65px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    text-align: center;
+    border-radius: 50%;
+    height: 65px;
+    line-height: 58px;
+    margin-right: 20px;
+}
+
+.sublist .list-info .text-info {
+    width: calc(100% - 85px);
+}
+
+.sublist .list-info .text-info h4 {
+    font-weight: bold;
+}
+
+.sec-sec {
+    background: #f5f5f5;
+}
+
+.sec-sec .sub-img {
+    margin-top: 0;
+}
+
+.sec-sec .list-info {
+    margin-top: 50px;
+}
+
+
+/*End Features*/
+
+
+/*Start Awesome Section*/
+
+.awesome {
+    padding: 80px 0;
+    position: relative
+}
+
+.awesome h2,
+.price-options h2 {
+    font-size: 50px;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+.awesome .head-border::after {
+    position: absolute;
+    left: 48%;
+    top: 132px
+}
+
+@media(max-width: 991px) {
+    .awesome .head-border::after {
+        display: none
+    }
+}
+
+.awesome p {
+    color: var(--p-color);
+    margin-bottom: 50px;
+    margin-top: 28px
+}
+
+.awesome .box h3 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*End Awesome Section*/
+
+
+/*Start Price Option*/
+
+.price-options {
+    background: #f5f5f5;
+    padding-bottom: 56px;
+    padding-top: 27px;
+    position: relative
+}
+
+.price-options h3 {
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    margin: 0;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+}
+
+.price-options .head-border::after {
+    position: absolute;
+    left: 48%;
+    top: 87px;
+    margin-bottom: 20px
+}
+
+.price-options .price-op-desc {
+    margin-top: 30px;
+    color: var(--p-color);
+    margin-bottom: 50px;
+}
+
+.price-options .basic,
+.price-options .expert {
+    margin-top: 35px;
+}
+
+.price-options .price-box {
+    background: #333;
+    padding: 10px 0 20px;
+    color: #fff;
+    border-bottom: 5px solid var(--main-color);
+}
+
+.price-options .price-box .price {
+    font-size: 70px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.price-options .price-box .usd {
+    font-size: 30px;
+    display: inline-block;
+}
+
+.price-options .price-box .period {
+    color: #adadad;
+    font-weight: bold;
+    font-style: italic;
+    display: block
+}
+
+.price-options .most-pop {
+    background: var(--main-color);
+    color: #fff;
+    padding: 5px 10px 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.price-options ul li {
+    padding: 10px;
+    border-bottom: 1px solid #f5f5f5;
+    color: #8c8c8c;
+    background: #FFF;
+}
+
+
+/*Start Price Option*/
+
+
+/*Start Testimonials*/
+
+.testim {
+    padding: 80px 0;
+    position: relative
+}
+
+.testim .head-border::after {
+    position: absolute;
+    left: 48%;
+    top: 118px
+}
+
+@media(max-width: 991px) {
+    .testim .head-border::after {
+        display: none
+    }
+}
+
+.testim .testim-desc {
+    margin-bottom: 40px;
+    color: var(--p-color);
+    margin-top: 28px
+}
+
+.testim .box .comment {
+    background: #f5f5f5;
+    color: #8e8f93;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.testim .box .comment::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 15px;
+    border-color: #f5f5f5 transparent transparent transparent;
+    position: absolute;
+    bottom: -28px;
+    left: 10px
+}
+
+.testim .media-heading {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.testim .media-body p {
+    color: var(--p-color)
+}
+
+
+/*End Testimonials*/
+
+
+/*Start stylish section*/
+
+.stylish {
+    background: url('../images/book.jpg') no-repeat center center;
+    min-height: 320px;
+    padding: 70px 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
+.stylish .overlay {
+    padding: 60px 0
+}
+
+.stylish .head-border::after {
+    position: absolute;
+    left: 47%;
+    top: 105px;
+}
+
+.stylish .stylish-desc {
+    margin-top: 36px;
+    color: var(--p-color);
+}
+
+.stylish button {
+    padding: 10px;
+    display: block;
+    border: 2px solid #fff;
+    background: transparent;
+    margin: 30px auto;
+}
+
+
+/*End Stylish Section*/
+
+
+/*Start Contact Us*/
+
+.contact-us {
+    padding: 80px 0;
+    position: relative
+}
+
+.contact-us .head-border::after {
+    position: absolute;
+    left: 48%;
+    top: 118px;
+    margin-top: 28px;
+}
+
+@media(max-width: 991px) {
+    .contact-us .head-border::after {
+        display: none
+    }
+}
+
+.contact-us .contact-desc {
+    margin-bottom: 40px;
+    color: var(--p-color);
+    margin-top: 35px;
+}
+
+.contact-us form input[type="text"],
+.contact-us form input[type="email"],
+.contact-us form textarea {
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: none;
+    box-shadow: none;
+}
+
+.contact-us form textarea {
+    height: 216px;
+    resize: none
+}
+
+.contact-us .contact-btn {
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: auto;
+    display: block;
+    border: none
+}
+
+
+/*End Contact Us*/
+
+
+/*Start Footer*/
+
+footer {
+    background: #000;
+    color: #EEE;
+    padding: 20px;
+    font-size: 18px
+}
+
+
+/*Start Footer*/
+
+
+/*Start Custom Framework*/
+
+
+/*
+This Class would make in the Small media the screens are small
+*/
+
+@media(max-width: 991px) {
+    .text-align-sm {
+        text-align: center
+    }
+}
+
+
+/*End Custom Framework*/
