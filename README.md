@@ -2,7 +2,12 @@
 
 The VoyageIt Node.js project is a comprehensive travel management system built to simplify and enhance the travel experience. This project incorporates various features like email download, login system, booking system, itinerary management, and more, providing users with a streamlined platform for efficient travel planning and management.
 
-Check UI code repo from [here](https://github.com/YaraElmalah/voyageIt)
+## UI Project
+
+To complement the VoyageIt Node.js project, we have also developed a user interface implementation using HTML, CSS, Bootstrap, Font Awesome, and jQuery. The [VoyageIt UI Project](https://github.com/YaraElmalah/voyageIt) repository contains the code and details for the visually appealing and user-friendly interface. It seamlessly integrates with the Node.js project and enhances the overall user experience.
+
+Feel free to explore the VoyageIt UI Project repository to familiarize yourself with the interface design, responsiveness, and interactive features. Contributions, suggestions, and feedback are welcome as we continue to improve both projects to meet the needs of travelers worldwide.
+
 
 ## Features
 
