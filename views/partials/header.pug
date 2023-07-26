@@ -9,16 +9,21 @@ header
             span it
           p.lead
             | Take you from the wind of Paris to the country of Poland, dance
-            | with Finnland music and eat Shawrma from Middle East
-          button Download
+            | with Finland music and eat Shawarma from the Middle East
+          button
+            a(href="files/voyageit-guide.pdf", download) Download
         .col-sm-6
-          form.center-block
+          - if (!isAuthenticated)
             h2.text-capitalize.text-center
               | try your 
-              span free
-              |  trial
-            input.form-control(type='text' name='username' placeholder='Name')
-            input.form-control(type='email' name='email' placeholder='Email')
-            input.form-control(type='password' name='password' placeholder='Password')
-            input.btn.btn-block(type='submit' value='Get Started')
+              span free 
+              | trial
+            form(id="signup" method='POST' action='/register')
+              input(type='hidden', name='_csrf', value=csrfToken)
+              input.form-control(type='text' name='name' placeholder='Name')
+              input.form-control(type='email' name='email' placeholder='Email')
+              input.form-control(type='password' name='password' placeholder='Password')
+              input.btn.btn-block(type='submit' value='Get Started')
+            
+
 // End Header

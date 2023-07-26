@@ -1,0 +1,19 @@
+include ../partials/head
+// Start Register
+section#contact.contact-us
+  .container
+    h2.contact-head.head-border.h1.text-capitalize.text-center.text-uppercase
+      | Login
+    // Start Our Grid System
+    .row
+      form.auth-form(id="signin" method='POST' action='/login')
+        .col-md-6
+          input(type='hidden', name='_csrf', value=csrfToken)
+          input.form-control.input-lg(type='text' name='name' placeholder='Name Or Email')
+          input.form-control.input-lg(type='text' name='password' placeholder='Password')
+          button.contact-btn.text-capitalize.btn-lg Login
+    // End Our Grid System
+   
+   
+// End Register
+include ../partials/footer
