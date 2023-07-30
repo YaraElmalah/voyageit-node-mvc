@@ -6,7 +6,7 @@ section#contact.contact-us
       | Register Now
     // Start Our Grid System
     .row
-      form.auth-form(id="signup" method='POST' action='/register')
+      form.auth-form(id="signup" method='POST' action='/auth/register')
         .col-md-6
           input(type='hidden', name='_csrf', value=csrfToken)
           input.form-control.input-lg(type='text' name='name' placeholder='Name')

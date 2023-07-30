@@ -52,14 +52,22 @@ exports.postLogin = async (req, res) => {
 
         // Store user information in the session cookie
         req.session.user = { _id: user._id, name: user.name, email: user.email };
-        res.send('Login successful');
+        req.session.isLoggedIn = true;
+        res.redirect('/')
     } catch (err) {
         res.status(500).send('Error during login');
     }
 }
 
 exports.logout = (req, res) => {
-    // Clear the session cookie to log the user out
-    req.session = null;
-    res.send('Logged out successfully');
+    // Destroy the session to log the user out
+    req.session.destroy((err) => {
+        if (err) {
+            console.error('Error destroying session:', err);
+            return res.status(500).send('Error logging out.');
+        }
+
+        // Redirect the user to the login page after logout
+        res.redirect('/');
+    });
 }

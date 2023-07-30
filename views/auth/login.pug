@@ -6,10 +6,10 @@ section#contact.contact-us
       | Login
     // Start Our Grid System
     .row
-      form.auth-form(id="signin" method='POST' action='/login')
+      form.auth-form(id="signin" method='POST' action='/auth/login')
         .col-md-6
           input(type='hidden', name='_csrf', value=csrfToken)
-          input.form-control.input-lg(type='text' name='name' placeholder='Name Or Email')
+          input.form-control.input-lg(type='text' name='login' placeholder='Name Or Email')
           input.form-control.input-lg(type='text' name='password' placeholder='Password')
           button.contact-btn.text-capitalize.btn-lg Login
     // End Our Grid System
