@@ -24,6 +24,16 @@ The VoyageIt Node.js project is a comprehensive travel management system built t
 5. Start the application: `npm start`
 6. Access the application at: [http://localhost:3000](http://localhost:3000)
 
+## Environment Variables
+
+Before running the application, you need to configure the following environment variables in the `.env` file:
+
+- `PORT`: The port number on which the server will listen. By default, it is set to `3000`. You can change it to any available port number you prefer.
+
+- `MONGODB_URI`: The connection string for your MongoDB database. Replace this variable with the URI of your MongoDB database to establish a connection. For example, `mongodb://username:password@localhost:27017/mydatabase`.
+
+- `SESSION_ENC`: This variable is used to set the session encryption key. It is essential for securely managing user sessions. Please provide a strong and unique secret for this variable to enhance security. For example, `SESSION_ENC=mysecretenckey123`.
+
 ## Usage
 
 1. Set up your user account by registering with VoyageIt.
