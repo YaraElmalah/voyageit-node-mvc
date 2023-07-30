@@ -13,7 +13,6 @@ yarn-error.log
 
 # Environment variables and secrets
 .env
-.env.*
 
 # Editor and IDE files
 .idea/
