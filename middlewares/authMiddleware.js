@@ -1,5 +1,5 @@
 const { body } = require('express-validator'); //we call a subpackage
-const User = require('../models/user');
+const User = require('../models/User');
 // Middleware to check if the user is logged in
 exports.isGuest = (req, res, next) => {
     // Check if the user is authenticated 

@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
-const User = require('../models/user');
-const { validationResult } = require('express-validator'); 
+const User = require('../models/User');
+const { validationResult } = require('express-validator');
 
 exports.getRegister = (req, res) => {
     res.render('auth/register', { pageTitle: 'Register' });
@@ -8,10 +8,10 @@ exports.getRegister = (req, res) => {
 exports.postRegister = async (req, res) => {
     const { name, email, password } = req.body;
     try {
-        const errors = validationResult(req); 
-        if (!errors.isEmpty()) {       
-            return res.status(422).render('auth/register', {                
-                pageTitle: 'Register',
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(422).render('auth/register', {
+                pageTitle: 'Register - Errors',
                 errorMessages: errors.array(),
             });
         }
@@ -35,34 +35,26 @@ exports.postRegister = async (req, res) => {
 exports.getLogin = (req, res) => {
     res.render('auth/login', { pageTitle: 'Login' });
 }
-exports.postLogin = async (req, res) => {
-    const { login, password } = req.body;
+exports.postLogin = (req, res) => {
     try {
-        let user;
-        if (isEmailFormat(login)) {
-            user = await User.findOne({ email: login });
-        } else {
-            user = await User.findOne({ name: login });
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(422).render('auth/login', {
+                pageTitle: 'Login - Errors',
+                errorMessages: errors.array(),
+            });
         }
-
-        if (!user) {
-            return res.status(404).send('User not found');
-        }
-
-        // Compare the provided password with the hashed password in the database
-        const isPasswordValid = await bcrypt.compare(password, user.password);
-        if (!isPasswordValid) {
-            return res.status(401).send('Invalid password');
-        }
-
-        // Store user information in the session cookie
-        req.session.user = { _id: user._id, name: user.name, email: user.email };
-        req.session.isLoggedIn = true;
-        res.redirect('/')
+      // Check if req.user exists and if the user is authenticated
+      if (req.session.user && req.session.isLoggedIn) {
+        res.redirect('/');
+      } else {
+        throw new Error('Invalid email or password');
+      }
     } catch (err) {
-        res.status(500).send('Error during login');
+      res.render('auth/login', { pageTitle: 'Login', errorMessages: [err.message] });
     }
-}
+  };
+  
 
 exports.logout = (req, res) => {
     // Destroy the session to log the user out

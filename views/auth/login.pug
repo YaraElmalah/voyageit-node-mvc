@@ -8,6 +8,11 @@ section#contact.contact-us
     .row
       form.auth-form(id="signin" method='POST' action='/auth/login')
         .col-md-6
+          - if (errorMessages)
+            div.alert.alert-danger.error-alert__auth(role="alert")
+              each errorMessage in errorMessages
+                  ul 
+                    li= errorMessage.msg
           input(type='hidden', name='_csrf', value=csrfToken)
           input.form-control.input-lg(type='text' name='login' placeholder='Name Or Email')
           input.form-control.input-lg(type='text' name='password' placeholder='Password')
