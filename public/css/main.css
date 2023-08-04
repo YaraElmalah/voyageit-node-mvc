@@ -677,4 +677,8 @@ This Class would make in the Small media the screens are small
     align-items: center;
     height: 70vh;
 }
+.error-alert__auth{
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
 /*End Auth Form*/

@@ -14,11 +14,12 @@ const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 3000;
 
 
+
 app.use(bodyParser.urlencoded({ extended: false }));
 // Routes
 const homeRoutes = require('./routes/home');
 const authRoutes = require('./routes/auth');
-const { isGuest } = require('./middlewares/authMiddleware');
+
 
 
 const store = new MongoDBStore({

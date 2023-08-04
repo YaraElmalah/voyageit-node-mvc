@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
-const { isEmailFormat } = require('../util/formHelpers');
+const { validationResult } = require('express-validator'); 
 
 exports.getRegister = (req, res) => {
     res.render('auth/register', { pageTitle: 'Register' });
@@ -8,6 +8,13 @@ exports.getRegister = (req, res) => {
 exports.postRegister = async (req, res) => {
     const { name, email, password } = req.body;
     try {
+        const errors = validationResult(req); 
+        if (!errors.isEmpty()) {       
+            return res.status(422).render('auth/register', {                
+                pageTitle: 'Register',
+                errorMessages: errors.array(),
+            });
+        }
         // Hash the password before storing it in the database
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = new User({
@@ -16,15 +23,13 @@ exports.postRegister = async (req, res) => {
             password: hashedPassword,
         });
         await user.save();
-        console.log('User registered successfully');
-        return res.status(201).render('index', {
-            pageTitle: 'VoyageIt',
-            isAuthenticated: true,
-            user: user
-        });
+
+        // Redirect the user to the login page after logout
+        res.redirect('/');
     } catch (err) {
         console.log(err);
-        res.status(500).send('Error registering user');
+        //Display the error message to the user 
+        res.render('auth/register', { pageTitle: 'Register', errorMessages: [err.message] });
     }
 }
 exports.getLogin = (req, res) => {
