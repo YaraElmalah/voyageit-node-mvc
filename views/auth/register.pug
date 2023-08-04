@@ -1,0 +1,25 @@
+include ../partials/head
+// Start Register
+section#contact.contact-us
+  .container
+    h2.contact-head.head-border.h1.text-capitalize.text-center.text-uppercase
+      | Register Now
+    // Start Our Grid System
+    .row
+      form.auth-form(id="signup" method='POST' action='/auth/register')
+        .col-md-6
+          - if (errorMessages)
+            div.alert.alert-danger.error-alert__auth(role="alert")
+              each errorMessage in errorMessages
+                  ul 
+                    li= errorMessage.msg
+          input(type='hidden', name='_csrf', value=csrfToken)
+          input.form-control.input-lg(type='text' name='name' placeholder='Name')
+          input.form-control.input-lg(type='email' name='email' placeholder='Email')
+          input.form-control.input-lg(type='text' name='password' placeholder='Password')
+          button.contact-btn.text-capitalize.btn-lg Register
+    // End Our Grid System
+   
+   
+// End Register
+include ../partials/footer

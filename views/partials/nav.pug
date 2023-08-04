@@ -23,4 +23,12 @@ nav.navbar.navbar-inverse.navbar-fixed-bottom
                     a(href="#reviews") reviews
                 li
                     a(href="#contact") contact
+                - if(isAuthenticated)
+                    li
+                        a(href="../auth/logout") Logout
+                - else
+                    li
+                        a(href="../auth/login") Login
+                    li
+                        a(href="../auth/register") Register
 //End Nav

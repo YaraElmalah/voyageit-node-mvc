@@ -109,7 +109,7 @@ header .lead::before {
     }
 }
 
-header button,
+header button, 
 .stylish button {
     background: transparent;
     padding: 10px 20px;
@@ -118,10 +118,15 @@ header button,
     font-family: 'Raleway';
     font-size: 20px;
     border-radius: 5px;
+    color: #fff;
+}
+header button a, header button a:active, header button a:hover, header button a:visited{
+    color: #fff;
+    text-decoration: none;
 }
 
 header form {
-    width: 360px;
+    width: 100%;
     background: #fff;
     border-radius: 5px;
 }
@@ -665,3 +670,15 @@ This Class would make in the Small media the screens are small
 
 
 /*End Custom Framework*/
+/*Start Auth Form*/
+.auth-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.error-alert__auth{
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+/*End Auth Form*/
