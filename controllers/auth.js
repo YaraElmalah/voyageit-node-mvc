@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const nodemailer = require('nodemailer');
 const User = require('../models/User');
 const { validationResult } = require('express-validator');
 
@@ -24,8 +25,33 @@ exports.postRegister = async (req, res) => {
         });
         await user.save();
 
-        // Redirect the user to the login page after logout
-        res.redirect('/');
+        // Send confirmation email
+        let transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT,
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS
+            }
+        });
+
+        let mailOptions = {
+            from: '"VoyageIt" <no-reply@voyageit.com>',
+            to: email,
+            subject: 'Email Confirmation',
+            text: 'Please confirm your email address by clicking the following link:',
+            html: '<p>Please confirm your email address by clicking the following link:</p><a href="http://localhost:3000/confirm/' + user._id + '">Confirm Email</a>'
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.log(error);
+                return res.render('auth/register', { pageTitle: 'Register', errorMessages: ['Error sending confirmation email.'] });
+            } else {
+                console.log('Email sent: ' + info.response);
+                res.redirect('/');
+            }
+        });
     } catch (err) {
         console.log(err);
         //Display the error message to the user 
