@@ -1,6 +1,15 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
 const { validationResult } = require('express-validator');
+const crypto = require('crypto');
+const nodemailer = require('nodemailer');
+const smtpTransport = nodemailer.createTransport({
+  service: 'Gmail',
+  auth: {
+    user: 'your-email@gmail.com',
+    pass: 'your-password'
+  }
+});
 
 exports.getRegister = (req, res) => {
     res.render('auth/register', { pageTitle: 'Register' });
