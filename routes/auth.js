@@ -20,4 +20,8 @@ router.post('/login', isGuest, loginMiddleware , authController.postLogin);
 // Logout
 router.get('/logout', isAuthenticated, authController.logout);
 
+// Forgot Password
+router.get('/forgotPassword', isGuest, authController.getForgotPassword);
+router.post('/forgotPassword', isGuest, authController.postForgotPassword);
+
 module.exports = router;
